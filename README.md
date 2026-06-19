@@ -36,3 +36,34 @@ How accurately can an AI model predict a song's emotional mood based on extracte
 - Scikit-learn
 - Streamlit
 - Tensorflow
+
+
+Possible new layout:
+
+sonata/
+├── CMakeLists.txt             # Builds C++ components into a shared library (.so/.dylib/.dll)
+├── pyproject.toml             # Python dependency and packaging configuration
+├── README.md
+│
+├── src/
+│   ├── sonata.mojo            # The primary CLI entry point (Mojo binary)
+│   │
+│   ├── core/                  # High-performance Mojo modules
+│   │   ├── __init__.mojo
+│   │   ├── audio.mojo         # Audio loader and wave management
+│   │   └── pipeline.mojo      # Controls coordination between ML models and DSP
+│   │
+│   ├── backend/               # Python ML Engine (Loaded dynamically by Mojo)
+│   │   ├── __init__.py
+│   │   ├── models.py          # Wrappers for Instrument, Genre, and Mood models
+│   │   └── utils.py           # Feature engineering fallback (Librosa/Torch)
+│   │
+│   └── dsp/                   # C++ Low-Level Signal Processing
+│       ├── include/
+│       │   └── dsp_core.hpp   # C++ header with C-compatible ABI declarations
+│       └── src/
+│           └── dsp_core.cpp   # Heavy audio math (FFT, Mel-Spectrogram optimization)
+│
+└── tests/                     # Validation suite
+    ├── test_backend.py        # Python unit tests
+    └── test_core.mojo         # Mojo performance benchmarks
