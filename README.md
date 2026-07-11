@@ -1,5 +1,5 @@
 # Klink
-> For the sake of package conflicts and environement identitification: klink-audio
+> For the sake of package conflicts and environement identitification: **klink-audio**
 
 _AI4ALL Class3-Group1_
 #### Project Description
