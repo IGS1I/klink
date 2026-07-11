@@ -2,7 +2,7 @@
 > For the sake of package conflicts and environement identitification: **klink-audio**
 
 _AI4ALL Class3-Group1_
-#### Project Description
+## Project Description
 Project will showcase an AI model's ability to deconstruct songs, predict their metadata, and then possibly make a genre-based or mood-based playlist for a user to enjoy.
 
 ## Project Created & Devleloped by:
@@ -43,13 +43,14 @@ How accurately can an AI model predict a song's emotional mood based on extracte
 
 Possible new layout:
 
-sonata/
+```directory structure
+klink/
 ├── CMakeLists.txt             # Builds C++ components into a shared library (.so/.dylib/.dll)
 ├── pyproject.toml             # Python dependency and packaging configuration
 ├── README.md
 │
 ├── src/
-│   ├── sonata.mojo            # The primary CLI entry point (Mojo binary)
+│   ├── klink.mojo            # The primary CLI entry point (Mojo binary)
 │   │
 │   ├── core/                  # High-performance Mojo modules
 │   │   ├── __init__.mojo
