@@ -1,8 +1,13 @@
+# Project environment
 .venv/
 venv/
-reqName.txt
-Data/IRMAS-TrainingData
-Data/IRMAS-Testing Data
-Data/GTZAN
-Data/EMOMUSIC - clips_45seconds
-*ipynb
+.pixi
+.vscode
+.mypy_cache
+
+# Datasets
+data/IRMAS-TrainingData
+data/IRMAS-Testing Data
+data/GTZAN
+data/EMOMUSIC - clips_45seconds
+
