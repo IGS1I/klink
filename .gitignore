@@ -12,3 +12,4 @@ data/IRMAS-Testing Data
 data/GTZAN
 data/EMOMUSIC - clips_45seconds
 data/raw/*
+!/data/raw/ACQUIRE.md
