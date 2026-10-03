@@ -72,8 +72,8 @@ klink/
 │
 ├── data/
 │   ├── raw/                   # Placeholder directory for raw datasets
-│   ├── processed/             # CSVs of extracted features, from raw datasets
-│   └── ACQUIRE.md             # Instructions for aqcuiring raw datasets
+│   │     └── ACQUIRE.md       # Instructions for aqcuiring raw datasets
+│   └── processed/             # CSVs of extracted features, from raw datasets
 │
 ├── docs/
 │   ├── CHANGELOG.md           # klink changelogs
