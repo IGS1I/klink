@@ -17,6 +17,7 @@ streamlit = ">=1.47.1"
 jupyter = ">=1.0.0"
 ipykernel = ">=6.0.0"
 matplotlib = ">=0.10"
+tqdm = ">=0.10"
 
 [target.linux-64.dependencies]
 max = "*"
