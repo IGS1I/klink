@@ -6,13 +6,18 @@ import librosa
 import tempfile
 import os
 from sklearn.preprocessing import LabelEncoder
+from pathlib import Path
+
+# Grab file paths
+project_root = Path.cwd().resolve().parent
+model_path = project_root / "models"
 
 #Lead model and label encoder
 @st.cache_resource
 def load_model_and_encoder():
-    model = tf.keras.models.load_model('./models/Instrument_model.keras')
+    model = tf.keras.models.load_model(model_path / 'Instrument_model.keras')
     label_encoder = LabelEncoder()
-    label_encoder.classes_ = np.load('./models/Instrument_classes.npy', allow_pickle=True)
+    label_encoder.classes_ = np.load(model_path / 'Instrument_classes.npy', allow_pickle=True)
     return model, label_encoder
 
 def extract_audio_features(audio_file):
